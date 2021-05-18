@@ -67,7 +67,7 @@
 									"font": "Arial;13;0",
 									"left": 8,
 									"top": 8,
-									"width": 1257,
+									"width": 1369,
 									"height": 841,
 									"nameLabel": {
 										"$ref": "AAAAAAF5f5OMMxgmdDc="
@@ -174,14 +174,14 @@
 											"left": 186,
 											"top": 80,
 											"width": 1,
-											"height": 367
+											"height": 383
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 144,
 									"top": 40,
 									"width": 83.57177734375,
-									"height": 407,
+									"height": 423,
 									"nameCompartment": {
 										"$ref": "AAAAAAF5f9pf8hg3p8w="
 									},
@@ -287,14 +287,14 @@
 											"left": 716,
 											"top": 80,
 											"width": 1,
-											"height": 369
+											"height": 383
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 680,
 									"top": 40,
 									"width": 72.736328125,
-									"height": 409,
+									"height": 423,
 									"nameCompartment": {
 										"$ref": "AAAAAAF5f9p8+hhXILI="
 									},
@@ -1059,7 +1059,7 @@
 											"left": 709,
 											"top": 352,
 											"width": 14,
-											"height": 73
+											"height": 89
 										}
 									],
 									"font": "Arial;13;0",
@@ -1103,9 +1103,9 @@
 												"$ref": "AAAAAAF5f+K9ABkeEN8="
 											},
 											"font": "Arial;13;0",
-											"left": 804,
+											"left": 766,
 											"top": 344,
-											"width": 256.52783203125,
+											"width": 332.40771484375,
 											"height": 13,
 											"alpha": 1.5707963267948966,
 											"distance": 10,
@@ -1113,7 +1113,7 @@
 												"$ref": "AAAAAAF5f+K9ABkfZTE="
 											},
 											"edgePosition": 1,
-											"text": "7 : Vérification des informations de paiement"
+											"text": "7 : Demande de vérification des informations de paiement"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1438,7 +1438,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 314,
-											"top": 420,
+											"top": 436,
 											"width": 264.4814453125,
 											"height": 13,
 											"alpha": 1.5707963267948966,
@@ -1461,7 +1461,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 446,
-											"top": 435,
+											"top": 451,
 											"height": 13,
 											"alpha": 1.5707963267948966,
 											"distance": 25,
@@ -1482,7 +1482,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 447,
-											"top": 400,
+											"top": 416,
 											"height": 13,
 											"alpha": -1.5707963267948966,
 											"distance": 10,
@@ -1503,7 +1503,7 @@
 											"visible": false,
 											"font": "Arial;13;0",
 											"left": 186,
-											"top": 416,
+											"top": 432,
 											"width": 14,
 											"height": 25
 										}
@@ -1515,7 +1515,7 @@
 									"tail": {
 										"$ref": "AAAAAAF5f9p8+xhcuJc="
 									},
-									"points": "709:416;186:416",
+									"points": "709:432;186:432",
 									"nameLabel": {
 										"$ref": "AAAAAAF5f+PCWRlkKSE="
 									},
@@ -1528,6 +1528,58 @@
 									"activation": {
 										"$ref": "AAAAAAF5f+PCWRlnw8U="
 									}
+								},
+								{
+									"_type": "UMLNoteView",
+									"_id": "AAAAAAF5f+npdbwJwqQ=",
+									"_parent": {
+										"$ref": "AAAAAAF5f5OMMhgkIfs="
+									},
+									"font": "Arial;13;0",
+									"left": 640,
+									"top": 696,
+									"width": 472,
+									"height": 113,
+									"text": "Scénario alternatif :\n \nLes informations bancaires ne sont pas justes.\n8.1. Le SI indique à l'utilisateur que les informations bancaires saisies sont incorrectes.\n8.2. L'utilisateur les saisit à nouveau.\nLe scénario nominal considère que les informations saisies sont OK."
+								},
+								{
+									"_type": "UMLNoteView",
+									"_id": "AAAAAAF5f+poHbwT2X0=",
+									"_parent": {
+										"$ref": "AAAAAAF5f5OMMhgkIfs="
+									},
+									"font": "Arial;13;0",
+									"left": 80,
+									"top": 712,
+									"width": 456,
+									"height": 85,
+									"text": "Scénario d'erreur :\n \n4.1. Le SI indique à l'utilisateur que l'atelier existe déjà.\n4.2. L'utilisateur abandonne.\nLe scénario s'arrête à ce point."
+								},
+								{
+									"_type": "UMLNoteView",
+									"_id": "AAAAAAF5f+yhZ7wdzh4=",
+									"_parent": {
+										"$ref": "AAAAAAF5f5OMMhgkIfs="
+									},
+									"font": "Arial;13;0",
+									"left": 80,
+									"top": 584,
+									"width": 473,
+									"height": 100,
+									"text": "Scénario d'erreur :\n \nImpossible de se connecter à la base de données.\n5.1. La base de données est inaccessible\n5.2. Le SI indique l'échec de connexion à la base de données.\nCe scénario se termine à ce point."
+								},
+								{
+									"_type": "UMLNoteView",
+									"_id": "AAAAAAF5f+36MLwkLrQ=",
+									"_parent": {
+										"$ref": "AAAAAAF5f5OMMhgkIfs="
+									},
+									"font": "Arial;13;0",
+									"left": 640,
+									"top": 584,
+									"width": 473,
+									"height": 100,
+									"text": "Scénario alternatif :\n \nLes informations saisies ne sont pas justes.\n4.1. Le Si indique à l'utilisateur que les informations saisies ne sont justes.\n4.2. L'utilisateur les saisit à nouveau.\nLe scénario nominal considère que les informations saisies sont OK."
 								}
 							]
 						}
@@ -1625,7 +1677,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF5f5OMMhgj1ms="
 							},
-							"name": "Vérification des informations de paiement",
+							"name": "Demande de vérification des informations de paiement",
 							"source": {
 								"$ref": "AAAAAAF5f9p8+hhVr0Q="
 							},
@@ -1725,7 +1777,8 @@
 					"_parent": {
 						"$ref": "AAAAAAF5f5OMMhgi164="
 					},
-					"name": "Role1"
+					"name": "Role1",
+					"type": ""
 				},
 				{
 					"_type": "UMLAttribute",
@@ -1733,7 +1786,8 @@
 					"_parent": {
 						"$ref": "AAAAAAF5f5OMMhgi164="
 					},
-					"name": "Role2"
+					"name": "Role2",
+					"type": ""
 				},
 				{
 					"_type": "UMLAttribute",
@@ -1741,7 +1795,8 @@
 					"_parent": {
 						"$ref": "AAAAAAF5f5OMMhgi164="
 					},
-					"name": "Role3"
+					"name": "Role3",
+					"type": ""
 				}
 			]
 		}

@@ -1000,7 +1000,7 @@
 									"top": 472,
 									"width": 369,
 									"height": 100,
-									"text": "Scénario d'erreur :\n \nImpossible de supprimer le compte, un utilisateur est lié\n4.1 Un utilisateur est lié au compte\n4.2 Le SI indique à l'admin qu'un utilisateur est lié.\nCe scénario se termine à ce point."
+									"text": "Scénario d'erreur :\n \nImpossible de supprimer le compte, un utilisateur est lié\n4.1 Un utilisateur est lié à l'atelier\n4.2 Le SI indique à l'admin qu'un utilisateur est lié.\nCe scénario se termine à ce point."
 								},
 								{
 									"_type": "UMLNoteView",

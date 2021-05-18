@@ -42,7 +42,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF4+ZMzjWTFAZk="
 									},
-									"name": "Diagramme de séquence création de compte",
+									"name": "Diagramme de séquence création atelier",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -63,9 +63,9 @@
 													"font": "Arial;13;0",
 													"left": 32.72998046875,
 													"top": 13,
-													"width": 260.42236328125,
+													"width": 235.126953125,
 													"height": 13,
-													"text": "Diagramme de séquence création de compte"
+													"text": "Diagramme de séquence création atelier"
 												},
 												{
 													"_type": "LabelView",
@@ -134,7 +134,7 @@
 															"top": 47,
 															"width": 73.57177734375,
 															"height": 13,
-															"text": "Utilisateur"
+															"text": "Admin"
 														},
 														{
 															"_type": "LabelView",
@@ -352,7 +352,7 @@
 														"$ref": "AAAAAAF4+ZRIX2Ug2F8="
 													},
 													"edgePosition": 1,
-													"text": "1 : Sélectionner création de compte"
+													"text": "1 : Sélectionner création atelier"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -797,7 +797,7 @@
 														"$ref": "AAAAAAF4+ZY8nmV/f0A="
 													},
 													"edgePosition": 1,
-													"text": "5 : Création du compte"
+													"text": "5 : Création atelier"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -908,7 +908,7 @@
 														"$ref": "AAAAAAF4+ZbSkmWW2s0="
 													},
 													"edgePosition": 1,
-													"text": "6 : Message - le compte a bien été créé"
+													"text": "6 : Message - l atelier a bien été créé"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -1001,7 +1001,7 @@
 											"top": 360,
 											"width": 456,
 											"height": 100,
-											"text": "Scénario alternatif :\n \nCe scénario commence au point 4 du scénario nominal.\n4.1. Le Si indique à l'utilisateur que les informations saisies ne sont justes.\n4.2. L'utilisateur les saisit à nouveau.\nLe scénario nominal considère que les informations saisies sont OK."
+											"text": "Scénario alternatif :\n \nCe scénario commence au point 4 du scénario nominal.\n4.1. Le Si indique à l'admin que les informations saisies ne sont justes.\n4.2. L'admin les saisit à nouveau.\nLe scénario nominal considère que les informations saisies sont OK."
 										},
 										{
 											"_type": "UMLNoteView",
@@ -1027,7 +1027,7 @@
 											"top": 480,
 											"width": 456,
 											"height": 104,
-											"text": "Scénario alternatif :\n \n4.1. Le SI indique à l'utilisateur que le compte existe déjà.\n4.2. L'utilisateur se connecte.\nLa création du compte s'arrête."
+											"text": "Scénario d'erreur :\n \n4.1. Le SI indique à l'admin que l'atelier existe déjà.\n4.2. L'admin abandonne.\nLe scénario s'arrête à ce point."
 										}
 									]
 								}
@@ -1039,7 +1039,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF4+ZMzjWTFAZk="
 									},
-									"name": "Sélectionner création de compte",
+									"name": "Sélectionner création atelier",
 									"source": {
 										"$ref": "AAAAAAF4+ZPfN2TgIeA="
 									},
@@ -1096,7 +1096,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF4+ZMzjWTFAZk="
 									},
-									"name": "Création du compte",
+									"name": "Création atelier",
 									"source": {
 										"$ref": "AAAAAAF4+ZQEEGUAGZo="
 									},
@@ -1110,7 +1110,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF4+ZMzjWTFAZk="
 									},
-									"name": "Message - le compte a bien été créé",
+									"name": "Message - l atelier a bien été créé",
 									"source": {
 										"$ref": "AAAAAAF4+ZQEEGUAGZo="
 									},
@@ -1127,7 +1127,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF4+ZMzjWTFAZk="
 									},
-									"name": "Utilisateur",
+									"name": "Admin",
 									"represent": {
 										"$ref": "AAAAAAF4+ZPfN2TfoZU="
 									},
@@ -1155,8 +1155,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF4+ZMzjWTEZ4E="
 							},
-							"name": "Role1",
-							"type": ""
+							"name": "Role1"
 						},
 						{
 							"_type": "UMLAttribute",
