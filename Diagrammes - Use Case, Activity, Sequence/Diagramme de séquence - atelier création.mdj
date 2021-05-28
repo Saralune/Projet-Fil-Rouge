@@ -1001,7 +1001,7 @@
 											"top": 360,
 											"width": 456,
 											"height": 100,
-											"text": "Scénario alternatif :\n \nCe scénario commence au point 4 du scénario nominal.\n4.1. Le Si indique à l'admin que les informations saisies ne sont justes.\n4.2. L'admin les saisit à nouveau.\nLe scénario nominal considère que les informations saisies sont OK."
+											"text": "Scénario alternatif :\n \nCe scénario commence au point 4 du scénario nominal.\n4.1. Le Si indique à l'admin que les informations saisies ne sont pas justes.\n4.2. L'admin les saisit à nouveau.\nLe scénario nominal considère que les informations saisies sont OK."
 										},
 										{
 											"_type": "UMLNoteView",
@@ -1155,7 +1155,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF4+ZMzjWTEZ4E="
 							},
-							"name": "Role1"
+							"name": "Role1",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
