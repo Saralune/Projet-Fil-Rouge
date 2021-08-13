@@ -1,0 +1,238 @@
+/******NAVBAR******/
+.logo{
+    width: 5em;
+    height: auto;
+}
+
+.basket{
+    width: 2em;
+    height: auto;
+}
+
+.navbar{
+    background-color: #F6F0E6;
+    font-family: 'Dashing Unicorn', 'Helvetica Neue', 'Arial Sans Serif';
+    color: #E88B8B;
+    font-size: 1.25em;
+}
+
+/*border of hamburger menu*/
+.navbar-toggler{
+    color: #E88B8B;
+    border-color: #E88B8B;
+}
+
+/*links color on navabar*/
+.navbar-nav{
+    color: #E88B8B;
+}
+
+
+/******FOOTER******/
+.footer{
+    background-color: #F6F0E6;
+    font-family: 'Dashing Unicorn', 'Helvetica Neue', 'Arial Sans Serif';
+    color: #E88B8B;   
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.coordonnees{
+    text-align: center;
+}
+
+.liens_footer {
+    font-family: 'Helvetica Neue', 'Arial Sans Serif';
+    color: #707070;
+    font-size: 0.75em;
+    font-style: italic;
+    text-align: center;
+}
+
+.rs_ig, .rs_pinterest, .rs_fb{
+    width: 3em;
+    height: auto;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+/*if screen < 620px, footer direction is column*/
+@media (max-width: 620px) {
+    .footer{
+        flex-direction: column;
+    }
+
+    .calendar_concept{
+        flex-direction: column;
+    }
+}
+
+/*if screen < 350px, rs direction is column*/
+@media (max-width: 350px){
+    .rs{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .rs_ig, .rs_pinterest, .rs_fb{
+        margin: 0.5em;
+    }
+
+    .tarifs{
+        flex-direction: column;
+    }
+}
+
+/******BODY******/
+html, body{
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+h6 {
+    color: #F2D57E;
+    font-size: 1.25em;
+    padding-top: 0.5em;
+    font-family: 'Dashing Unicorn', 'Helvetica Neue', 'Arial Sans Serif';
+    text-align: center;
+}
+
+p {
+    font-family: 'Helvetica Neue', 'Arial Sans Serif';
+    color: #707070;
+    font-size: 1em;
+}
+
+a{
+    color: #E88B8B; 
+    text-decoration: none;
+}
+
+a:hover{
+    color: #F2C4C8;
+}
+
+/*souligne le lien quand je clique dessus ////////// rajouter aussi le lien souligné quand je suis sur la bonne page*/
+a:focus{
+    text-decoration: underline;
+}
+
+.element_centre{
+    text-align: center;
+}
+
+/******HOME******/
+/*--Carousel--*/
+.carousel-caption{
+    color: #E88B8B;
+    background-color: white; 
+}
+
+.carousel-caption > p {
+    background-color: white;
+}
+
+.carousel-inner{
+    border-radius: 30px;
+    width: 95%;
+    margin: auto;
+}
+
+/*--Pastilles--*/
+.pastilles{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.sondage, .tutos{
+    width: 8em;
+    height: auto;
+}
+
+/*-Calendrier & Concept-*/
+.calendar_concept{
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.calendar_concept > h6, .concept > h6 {
+    color: #E88B8B; 
+}
+
+.concept, .calendrier {
+    border: #F2D57E 1px solid;
+    border-radius: 30px;
+    background-color: #F6F0E6;
+    margin: 2em;
+    padding: 2em;
+    width: fit-content;
+    height: auto;
+}
+
+/******SE CONNECTER******/
+.form_connexion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em;
+}
+
+.inscription_button{
+    background-color: #F2D57E;
+    border-radius: 25px;
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border: 0;
+    font-family: 'Helvetica Neue', 'Arial Sans Serif';
+    color: #707070;
+    font-size: 1em;
+    margin: 3em;
+}
+
+.connexion{
+    margin: 7em;
+}
+
+
+/******RESERVATION******/
+.sous_titre{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.tarifs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.colonne1 {
+    margin: 0.5em;
+    padding: 1em;
+    justify-content: flex-start;
+}
+.colonne2 {
+    margin: 0.5em;
+    padding: 1em;
+    justify-content: flex-end;
+}
+
+.tarifs_box{
+    margin: 1em auto;
+    width: 70%;
+    height: auto;
+}
+
+/*****SONDAGE*****/
+.form_sondage{
+    margin: 1em;
+    padding: 2em;
+    border: #F2D57E 1px solid;
+    border-radius: 50px;
+}
