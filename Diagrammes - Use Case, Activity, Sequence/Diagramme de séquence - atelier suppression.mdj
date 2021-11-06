@@ -86,7 +86,7 @@
 									"font": "Arial;13;0",
 									"left": 8,
 									"top": 8,
-									"width": 1209,
+									"width": 1761,
 									"height": 705,
 									"nameLabel": {
 										"$ref": "AAAAAAF5f2Xk01DxuUo="
@@ -1154,7 +1154,8 @@
 					"_parent": {
 						"$ref": "AAAAAAF5f2Xk0lDtvCM="
 					},
-					"name": "Role1"
+					"name": "Role1",
+					"type": ""
 				},
 				{
 					"_type": "UMLAttribute",
@@ -1162,7 +1163,17 @@
 					"_parent": {
 						"$ref": "AAAAAAF5f2Xk0lDtvCM="
 					},
-					"name": "Role2"
+					"name": "Role2",
+					"type": ""
+				},
+				{
+					"_type": "UMLAttribute",
+					"_id": "AAAAAAF8xuN5XiyjJwA=",
+					"_parent": {
+						"$ref": "AAAAAAF5f2Xk0lDtvCM="
+					},
+					"name": "Role3",
+					"type": ""
 				}
 			]
 		}
