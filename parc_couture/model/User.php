@@ -125,7 +125,7 @@ class User
     }
 
     //méthode pour aller chercher les infos d'un user avec son id
-    public function displayUser($bdd){
+ /*   public function displayUser($bdd){
         $id_user = $_SESSION['idUser'];
 
         try
@@ -155,7 +155,7 @@ class User
             //affichage d'une exception en cas d’erreur
             die('Erreur : '.$e->getMessage());
         }
-    }
+    }*/
 
     //méthode qui génére les super globales avec les valeurs d'attributs d'un utilisateur en bdd
     public function generateSuperGlobale($bdd)
@@ -347,7 +347,7 @@ class User
                 $identifiant = $donnees['identifiant_user'];
             }}
 
-
+            //include '../vue/vue_account_user.php';
         include('../vue/header.php');
         echo '
             <div class="flex-grow-1 form_sondage form_connexion user__information">
@@ -397,6 +397,8 @@ class User
                 $tel = $donnees['tel_user'];
                 $identifiant = $donnees['identifiant_user'];
             }}
+
+        //header('Location : http://localhost:8888/parc_couture/vue/vue_account_admin.php');
 
         include('../vue/header.php');
         echo '

@@ -23,7 +23,10 @@ create table atelier(
     prix_atelier int,
     animateur_atelier varchar (50),
     places_atelier int,
-	CONSTRAINT fk_IdUser FOREIGN KEY (id_user) REFERENCES utilisateur_connecte(id_user)
+    id_user int,
+	CONSTRAINT fk_IdUser 
+    FOREIGN KEY (id_user) 
+    REFERENCES utilisateur_connecte(id_user)
 );
 
 alter table atelier

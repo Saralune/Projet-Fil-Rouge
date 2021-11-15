@@ -38,6 +38,9 @@
         <!--JavaScript Parc Couture-->
         <script src="js/main.js" type="text/javascript"></script>
 
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
         <!--Script JS Calendar-19-->
         <script src="calendar-19/js/main.js"></script>
 

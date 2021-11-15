@@ -632,7 +632,7 @@
 											"font": "Arial;13;1",
 											"left": 573,
 											"top": 159,
-											"width": 163.63623046875,
+											"width": 228.00146484375,
 											"height": 13,
 											"text": "Atelier"
 										},
@@ -665,7 +665,7 @@
 									"font": "Arial;13;0",
 									"left": 568,
 									"top": 152,
-									"width": 173.63623046875,
+									"width": 238.00146484375,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF8zG75Imc6LZk="
@@ -702,7 +702,7 @@
 											"font": "Arial;13;0",
 											"left": 573,
 											"top": 182,
-											"width": 163.63623046875,
+											"width": 228.00146484375,
 											"height": 13,
 											"text": "-id_atelier: int",
 											"horizontalAlignment": 0
@@ -719,7 +719,7 @@
 											"font": "Arial;13;0",
 											"left": 573,
 											"top": 197,
-											"width": 163.63623046875,
+											"width": 228.00146484375,
 											"height": 13,
 											"text": "-nom_atelier: string",
 											"horizontalAlignment": 0
@@ -736,7 +736,7 @@
 											"font": "Arial;13;0",
 											"left": 573,
 											"top": 212,
-											"width": 163.63623046875,
+											"width": 228.00146484375,
 											"height": 13,
 											"text": "-date_atelier: string",
 											"horizontalAlignment": 0
@@ -753,7 +753,7 @@
 											"font": "Arial;13;0",
 											"left": 573,
 											"top": 227,
-											"width": 163.63623046875,
+											"width": 228.00146484375,
 											"height": 13,
 											"text": "-description_atelier: string",
 											"horizontalAlignment": 0
@@ -770,7 +770,7 @@
 											"font": "Arial;13;0",
 											"left": 573,
 											"top": 242,
-											"width": 163.63623046875,
+											"width": 228.00146484375,
 											"height": 13,
 											"text": "-prix_atelier: int",
 											"horizontalAlignment": 0
@@ -787,7 +787,7 @@
 											"font": "Arial;13;0",
 											"left": 573,
 											"top": 257,
-											"width": 163.63623046875,
+											"width": 228.00146484375,
 											"height": 13,
 											"text": "-animateur_atelier: string",
 											"horizontalAlignment": 0
@@ -804,7 +804,7 @@
 											"font": "Arial;13;0",
 											"left": 573,
 											"top": 272,
-											"width": 163.63623046875,
+											"width": 228.00146484375,
 											"height": 13,
 											"text": "-places_atelier: int",
 											"horizontalAlignment": 0
@@ -821,7 +821,7 @@
 											"font": "Arial;13;0",
 											"left": 573,
 											"top": 287,
-											"width": 163.63623046875,
+											"width": 228.00146484375,
 											"height": 13,
 											"text": "-id_user: int",
 											"horizontalAlignment": 0
@@ -830,7 +830,7 @@
 									"font": "Arial;13;0",
 									"left": 568,
 									"top": 177,
-									"width": 173.63623046875,
+									"width": 238.00146484375,
 									"height": 128
 								},
 								{
@@ -855,7 +855,7 @@
 											"font": "Arial;13;0",
 											"left": 573,
 											"top": 310,
-											"width": 163.63623046875,
+											"width": 228.00146484375,
 											"height": 13,
 											"text": "+getters(): string or int",
 											"horizontalAlignment": 0
@@ -872,7 +872,7 @@
 											"font": "Arial;13;0",
 											"left": 573,
 											"top": 325,
-											"width": 163.63623046875,
+											"width": 228.00146484375,
 											"height": 13,
 											"text": "+setters(param: string or int)",
 											"horizontalAlignment": 0
@@ -889,7 +889,7 @@
 											"font": "Arial;13;0",
 											"left": 573,
 											"top": 340,
-											"width": 163.63623046875,
+											"width": 228.00146484375,
 											"height": 13,
 											"text": "+createAtelier($bdd): string",
 											"horizontalAlignment": 0
@@ -906,9 +906,26 @@
 											"font": "Arial;13;0",
 											"left": 573,
 											"top": 355,
-											"width": 163.63623046875,
+											"width": 228.00146484375,
 											"height": 13,
 											"text": "+showAtelier($bdd): string",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
+											"_id": "AAAAAAF8/DcJt2WXFqc=",
+											"_parent": {
+												"$ref": "AAAAAAF8zG75I2c/JS4="
+											},
+											"model": {
+												"$ref": "AAAAAAF8/DcJmmWUiwE="
+											},
+											"font": "Arial;13;0",
+											"left": 573,
+											"top": 370,
+											"width": 228.00146484375,
+											"height": 13,
+											"text": "+displayAtelier($bdd): string",
 											"horizontalAlignment": 0
 										},
 										{
@@ -922,10 +939,10 @@
 											},
 											"font": "Arial;13;0",
 											"left": 573,
-											"top": 370,
-											"width": 163.63623046875,
+											"top": 385,
+											"width": 228.00146484375,
 											"height": 13,
-											"text": "+updateAtelier($bdd): string",
+											"text": "+updateAtelier($bdd, $id_atelier): string",
 											"horizontalAlignment": 0
 										},
 										{
@@ -939,34 +956,17 @@
 											},
 											"font": "Arial;13;0",
 											"left": 573,
-											"top": 385,
-											"width": 163.63623046875,
-											"height": 13,
-											"text": "+deleteAtelier($bdd): string",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
-											"_id": "AAAAAAF8734LJGNmN10=",
-											"_parent": {
-												"$ref": "AAAAAAF8zG75I2c/JS4="
-											},
-											"model": {
-												"$ref": "AAAAAAF8734LDGNjYDQ="
-											},
-											"font": "Arial;13;0",
-											"left": 573,
 											"top": 400,
-											"width": 163.63623046875,
+											"width": 228.00146484375,
 											"height": 13,
-											"text": "+getAtelier($bdd): string",
+											"text": "+deleteAtelier($bdd, $id_atelier): string",
 											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 568,
 									"top": 305,
-									"width": 173.63623046875,
+									"width": 238.00146484375,
 									"height": 113
 								},
 								{
@@ -1004,7 +1004,7 @@
 							"containerChangeable": true,
 							"left": 568,
 							"top": 152,
-							"width": 173.63623046875,
+							"width": 238.00146484375,
 							"height": 266,
 							"nameCompartment": {
 								"$ref": "AAAAAAF8zG75Imc5tsg="
@@ -1945,6 +1945,34 @@
 						},
 						{
 							"_type": "UMLOperation",
+							"_id": "AAAAAAF8/DcJmmWUiwE=",
+							"_parent": {
+								"$ref": "AAAAAAF8zG75Imc26Qo="
+							},
+							"name": "displayAtelier",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF8/Dc1pWWkgWQ=",
+									"_parent": {
+										"$ref": "AAAAAAF8/DcJmmWUiwE="
+									},
+									"name": "$bdd",
+									"type": ""
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF8/Dc1pWWlxgY=",
+									"_parent": {
+										"$ref": "AAAAAAF8/DcJmmWUiwE="
+									},
+									"type": "string",
+									"direction": "return"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
 							"_id": "AAAAAAF82+JcUJNWW0M=",
 							"_parent": {
 								"$ref": "AAAAAAF8zG75Imc26Qo="
@@ -1957,8 +1985,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF82+JcUJNWW0M="
 									},
-									"name": "$bdd",
-									"type": ""
+									"name": "$bdd"
 								},
 								{
 									"_type": "UMLParameter",
@@ -1968,6 +1995,15 @@
 									},
 									"type": "string",
 									"direction": "return"
+								},
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF8/DYaNmVOC+4=",
+									"_parent": {
+										"$ref": "AAAAAAF82+JcUJNWW0M="
+									},
+									"name": "$id_atelier",
+									"type": ""
 								}
 							]
 						},
@@ -1985,8 +2021,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF870GRFGMrFcY="
 									},
-									"name": "$bdd",
-									"type": ""
+									"name": "$bdd"
 								},
 								{
 									"_type": "UMLParameter",
@@ -1996,34 +2031,15 @@
 									},
 									"type": "string",
 									"direction": "return"
-								}
-							]
-						},
-						{
-							"_type": "UMLOperation",
-							"_id": "AAAAAAF8734LDGNjYDQ=",
-							"_parent": {
-								"$ref": "AAAAAAF8zG75Imc26Qo="
-							},
-							"name": "getAtelier",
-							"parameters": [
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAF8734mAWN5Zyk=",
-									"_parent": {
-										"$ref": "AAAAAAF8734LDGNjYDQ="
-									},
-									"name": "$bdd",
-									"type": ""
 								},
 								{
 									"_type": "UMLParameter",
-									"_id": "AAAAAAF8734mA2N6Xh4=",
+									"_id": "AAAAAAF8/DYzzGVdgz4=",
 									"_parent": {
-										"$ref": "AAAAAAF8734LDGNjYDQ="
+										"$ref": "AAAAAAF870GRFGMrFcY="
 									},
-									"type": "string",
-									"direction": "return"
+									"name": "$id_atelier",
+									"type": ""
 								}
 							]
 						}

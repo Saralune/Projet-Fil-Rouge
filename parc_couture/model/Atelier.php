@@ -58,7 +58,6 @@ class Atelier
                 'places_atelier' => $places_atelier,
                 'id_user' => $id_user
             ));
-
             $req->close();
         }
         catch(Exception $e) {
@@ -88,7 +87,7 @@ class Atelier
         }
     }
 
-    public function displayAtelier($bdd){
+    /*public function displayAtelier($bdd){
         $id_atelier = $this->getIdAtelier();
 
         try {
@@ -99,7 +98,8 @@ class Atelier
                                     ORDER BY id_atelier DESC
                                     ');
 
-
+            include '../vue/header.php';
+            echo '<div class="flex-grow-1 form_sondage form_connexion user__information">';
             while($donnees = $reponse->fetch()) {
                 if($id_atelier == $donnees['id_atelier']) {
                     $id = $donnees['id_atelier'];
@@ -112,49 +112,26 @@ class Atelier
                     $id_user = $donnees['id_user'];
                     $prenom_user = $donnees['prenom_user'];
 
-                    /*include '../vue/header.php';*/
-                    echo '
-                        <div class="flex-grow-1 form_sondage form_connexion user__information">
-    
-                            <div class="form_sondage width-page">
-                                <h4 class="user__infos">Atelier n°' . $id . ' : </h4>
-                    
-                                <div>
-                                    <p>Nom : ' . $nom . '</p>
-                                    <p>Date : ' . $date . '</p>
-                                    <p>Animateur : ' . $animateur . '</p>
-                                    <p>Description : ' . $description . '</p>
-                                    <p>Prix : ' . $prix . '</p>
-                                    <p>Nombre de places disponibles : ' . $places . '</p>
-                                    <p>Créé par : ' . $prenom_user . '<!--inner join avec n° id_user & nom_user--> </p>
-                                </div>
-                    
-                    
-                            </div>
-                    
-                        </div>
-                    ';
-                    /*include '../vue/footer.php';
-                    die();*/
-                }
 
+                    include '../vue/vue_ateliers.php';
+
+                }
+                echo '</div>';
+                include '../vue/footer.php';
             }
             $reponse->close();
         }
         catch(Exception $e) {
             die('Erreur : '.$e->getMessage());
         }
-    }
+    }*/
 
     //méthode de suppression d'un utilisateur
-    public function deleteAtelier($bdd){
-        //récupération des valeurs de l'objet
-        $id_atelier = $this->getIdAtelier();
-
+    public function deleteAtelier($bdd, $id_atelier){
         try
         {
             //requête ajout d'un utilisateur
-            $req = $bdd->prepare('DELETE FROM atelier WHERE id_atelier = '.$id_atelier.';');
+            $req = $bdd->prepare('DELETE FROM atelier WHERE id_atelier = '.$id_atelier.' LIMIT 1;');
             $req->execute();
         }
         catch(Exception $e)
@@ -164,35 +141,44 @@ class Atelier
         }
         //fermeture de la connexion à la bdd
         $req->closeCursor();
+
+/*        $nom_atelier = $this->getNomAtelier();
+        $date_atelier = $this->getDateAtelier();
+        $animateur_atelier = $this->getAnimateurAtelier();
+
+        try
+        {
+            //requête ajout d'un utilisateur
+            $req = $bdd->prepare('DELETE FROM atelier WHERE nom_atelier = "'.$nom_atelier.'"
+                                    AND date_atelier = "'.$date_atelier.'"
+                                    AND animateur_atelier = "'.$animateur_atelier.'" LIMIT 1');
+            $req->execute();
+        }*/
     }
 
     //méthode mise à jour des informations d'un utilisateur nom et prénom
-    public function updateAtelier($bdd)
+    public function updateAtelier($bdd, $id_atelier)
     {
-        $id_atelier = $this->getIdAtelier();
         $nom_atelier = htmlspecialchars($this->getNomAtelier());
         $date_atelier = htmlspecialchars($this->getDateAtelier());
         $description_atelier = htmlspecialchars($this->getDescriptionAtelier());
         $animateur_atelier = htmlspecialchars($this->getAnimateurAtelier());
         $prix_atelier = htmlspecialchars($this->getPrixAtelier());
         $places_atelier = htmlspecialchars($this->getPlacesAtelier());
-        $id_user = $this->getIdUser();
 
         try
         {
-            //requête modification d'un atelier
             $reponse = $bdd->prepare('UPDATE atelier 
-                        SET nom_atelier = "'.$nom_atelier.'",
+                        SET 
+                        nom_atelier = "'.$nom_atelier.'",
                         date_atelier = "'.$date_atelier.'",
                         description_atelier = "'.$description_atelier.'",
                         animateur_atelier = "'.$animateur_atelier.'",
-                        prix_atelier = "'.$prix_atelier.'",
-                        places_atelier = "'.$places_atelier.'",
-                        id_user = "'.$id_user.'"
+                        prix_atelier = '.$prix_atelier.',
+                        places_atelier = '.$places_atelier.'
                         WHERE id_atelier = '.$id_atelier.' LIMIT 1');
 
-            /*parler du champ modification
-            places totales ou places restantes*/
+
 
             $reponse->execute(array(
                 'nom_atelier' => $nom_atelier,
@@ -200,18 +186,16 @@ class Atelier
                 'description_atelier' => $description_atelier,
                 'animateur_atelier' => $animateur_atelier,
                 'prix_atelier' => $prix_atelier,
-                'places_atelier' => $places_atelier,
-                'id_user' => $id_user
+                'places_atelier' => $places_atelier
             ));
         }
         catch(Exception $e)
         {
-            //affichage d'une exception en cas d’erreur
             die('Erreur : '.$e->getMessage());
         }
     }
 
-    public function getAtelier($bdd){
+/*    public function getAtelier($bdd){
         $id_atelier = $this->getIdAtelier();
 
         try {
@@ -226,16 +210,13 @@ class Atelier
                     $animateur = $donnees['animateur_atelier'];
                     $places = $donnees['places_atelier'];
                 }
-                /*else {
-
-                }*/
             }
             $reponse->close();
         }
         catch(Exception $e) {
             die('Erreur : '.$e->getMessage());
         }
-    }
+    }*/
 
     /*-----------------------------------------------------
                 Getter and Setter :
@@ -368,4 +349,35 @@ class Atelier
         $this->id_user = $id_user;
     }
 
+}
+
+function displayAtelier($bdd){
+    try {
+        $reponse = $bdd->query('SELECT a.*, u.prenom_user FROM atelier a 
+                                    INNER JOIN utilisateur_connecte u 
+                                    ON a.id_user = u.id_user
+                                    ORDER BY id_atelier DESC
+                                    ');
+
+        include '../vue/header.php';
+        echo '<div class="flex-grow-1 form_sondage form_connexion user__information">';
+        while($donnees = $reponse->fetch()) {
+            $id = $donnees['id_atelier'];
+            $nom = $donnees['nom_atelier'];
+            $date = $donnees['date_atelier'];
+            $description = $donnees['description_atelier'];
+            $prix = $donnees['prix_atelier'];
+            $animateur = $donnees['animateur_atelier'];
+            $places = $donnees['places_atelier'];
+            $id_user = $donnees['id_user'];
+            $prenom_user = $donnees['prenom_user'];
+            include '../vue/vue_ateliers.php';
+        }
+        echo '</div>';
+        include '../vue/footer.php';
+        $reponse->close();
+    }
+    catch(Exception $e) {
+        die('Erreur : '.$e->getMessage());
+    }
 }

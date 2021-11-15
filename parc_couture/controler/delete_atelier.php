@@ -3,19 +3,22 @@ session_start();
 include "../connect/connect.php";
 include "../model/Atelier.php";
 
-$atelier = new Atelier(
-/*    $this->getNomAtelier(),
-    $this->getDateAtelier(),
-    $this->getDescriptionAtelier(),
-    $this->getPrixAtelier(),
-    $this->getAnimateurAtelier(),
-    $this->getPlacesAtelier(),*/
-);
+try{
+    $id_atelier = $id;
 
-$atelier->deleteAtelier($bdd);
+    $atelier = new Atelier(
+        $this->getNomAtelier(),
+        $this->getDateAtelier(),
+        $this->getDescriptionAtelier(),
+        $this->getPrixAtelier(),
+        $this->getAnimateurAtelier(),
+        $this->getPlacesAtelier()
+    );
 
-include "../vue/header.php";
-echo'
+    $atelier->deleteAtelier($bdd, $id_atelier);
+
+    include "../vue/header.php";
+    echo'
     <div class="user__inscription form_sondage">
         <p>L\'atelier a bien été supprimé.</p>
         <p><a class="inscription_button" href="../vue/vue_home.php">Accueil</a></p>
@@ -24,4 +27,12 @@ echo'
         <p><a class="inscription_button" href="../controler/display_atelier.php">Voir les atelier</a></p>
     </div>
 ';
-include('../vue/footer.php');
+    include('../vue/footer.php');
+}
+catch(Exception $e)
+{
+    //affichage d'une exception en cas d’erreur
+    die('Erreur : '.$e->getMessage());
+}
+
+
